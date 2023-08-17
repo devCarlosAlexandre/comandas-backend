@@ -3,7 +3,7 @@
 ``` mermaid
 erDiagram
     CLIENTE {
-        IDCliente (PK)
+        INT id
         Nome
         Sobrenome
         Telefone
@@ -11,7 +11,7 @@ erDiagram
     }
     
     COMANDA {
-        IDComanda (PK)
+        INT id
         IDCliente (FK)
         DataComanda
         ValorTotal
@@ -19,7 +19,7 @@ erDiagram
     }
     
     ITEM_COMANDA {
-        IDItemComanda (PK)
+        INT id
         IDComanda (FK)
         IDItemMenu (FK)
         Quantidade
@@ -27,7 +27,7 @@ erDiagram
     }
     
     ITEM_MENU {
-        IDItemMenu (PK)
+        INT id
         Nome
         Descricao
         Preco
