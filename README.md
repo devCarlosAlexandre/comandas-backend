@@ -1,16 +1,11 @@
 # comandas-backend
-## Diagrama
 
 ``` mermaid
 erDiagram
-  CLIENTE ||--o{ COMANDA : Realiza
-    COMANDA ||--|{ ITEM_COMANDA : Contem
-    ITEM_MENU ||--o{ ITEM_COMANDA : Pertence a
-
     CLIENTE {
         IDCliente (PK)
-        PrimeiroNome
-        UltimoNome
+        Nome
+        Sobrenome
         Telefone
         Email
     }
@@ -38,6 +33,8 @@ erDiagram
         Preco
     }
     
-  
+    CLIENTE ||--o{ COMANDA : Realiza
+    COMANDA ||--|{ ITEM_COMANDA : Contém
+    ITEM_MENU ||--o{ ITEM_COMANDA : Aparece em
 
 ```
